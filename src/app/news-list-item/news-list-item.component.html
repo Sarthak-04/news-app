@@ -1,0 +1,21 @@
+<div class="container">
+  <div *ngFor="let newsItem of news" class="media">
+    <div class="row">
+      <div class="col-md-3">
+        <a href={{newsItem.url}} target="_blank">
+          <img class="media-object" src={{newsItem.urlToImage}} alt="...">
+        </a>
+      </div>
+      <div class="col-md-7">
+        <a href={{newsItem.url}} target="_blank">
+          <h4 class="media-heading">{{newsItem.title}}</h4>
+        </a>
+        <div class="source-time">
+          <span class="source">{{newsItem.source.name}}</span>
+          <span class="time">{{convertTime(newsItem.publishedAt)}}</span>
+        </div>
+        <div class="description"> {{newsItem.description}} </div>
+      </div>
+    </div>
+  </div>
+</div>

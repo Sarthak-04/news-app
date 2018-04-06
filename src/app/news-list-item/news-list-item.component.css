@@ -1,0 +1,19 @@
+.row {
+    margin-bottom: 20px;
+}
+.media-object {
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    padding-bottom: 10px;
+}
+.source-time {
+    margin-bottom: 20px;
+}
+.time {
+    margin-right: 20px;
+    float: right;
+}
+.description {
+    margin-right: 10px;
+}
