@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { CarouselModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +14,7 @@ import { TechnologyNewsComponent } from './technology-news/technology-news.compo
 import { EntertainmentNewsComponent } from './entertainment-news/entertainment-news.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { InternationalNewsComponent } from './international-news/international-news.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,14 @@ import { InternationalNewsComponent } from './international-news/international-n
     NewsListItemComponent,
     TechnologyNewsComponent,
     EntertainmentNewsComponent,
-    InternationalNewsComponent
+    InternationalNewsComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CarouselModule.forRoot()
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]

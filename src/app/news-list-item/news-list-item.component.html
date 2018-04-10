@@ -1,12 +1,12 @@
 <div class="container">
   <div *ngFor="let newsItem of news" class="media">
-    <div class="row">
+    <div class="row news-item-row">
       <div class="col-md-3">
         <a href={{newsItem.url}} target="_blank">
           <img class="media-object" src={{newsItem.urlToImage}} alt="...">
         </a>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-4">
         <a href={{newsItem.url}} target="_blank">
           <h4 class="media-heading">{{newsItem.title}}</h4>
         </a>

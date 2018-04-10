@@ -1,0 +1,10 @@
+<carousel class="col-md-10 col-md-offset-1 carousel">
+  <slide *ngFor="let newsItem of news">
+    <a href={{newsItem.url}} target="_blank">
+      <img src={{newsItem.urlToImage}} alt="First slide" class="carousel-image">
+    </a>
+    <div class="carousel-caption d-none d-md-block">
+      <p>{{newsItem.title}}</p>
+    </div>
+  </slide>
+</carousel>
