@@ -1,7 +1,7 @@
 .carousel-image {
     display: block; 
     width: 100%; 
-    max-height:250px; 
+    max-height:300px; 
     object-fit: cover;
     margin: auto;
 }
@@ -9,6 +9,6 @@
 .carousel-caption {
     padding-bottom: 0;
     font-family: 'Tajawal', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     font-style: bold;
 }
