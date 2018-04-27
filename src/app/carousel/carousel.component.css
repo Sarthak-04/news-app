@@ -9,6 +9,7 @@
 .carousel-caption {
     padding-bottom: 0;
     font-family: 'Tajawal', sans-serif;
-    font-size: 16px;
+    font-size: 16x;
     font-style: bold;
+    background: rgba(0,0,0,0.5);
 }

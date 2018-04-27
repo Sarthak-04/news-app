@@ -9,6 +9,9 @@ import { News } from '../news';
 export class NewsListItemComponent implements OnInit {
 
   @Input() news: News[];
+  displayNews: News[] = [];
+  newsItemDispayedIndex: number;
+  showMore: boolean = false;
   /* to use getTime to conver date to string*/
   convertTime (dateString): string {
     let givenTime = new Date(dateString).getTime(),
@@ -27,9 +30,36 @@ export class NewsListItemComponent implements OnInit {
   }
   
   
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
+    this.newsItemDispayedIndex=0;
+    this.getData();
   }
 
+  public urlToImage(index: string) : string {
+    return this.news[index].urlToImage ? this.news[index].urlToImage : '/assets/images/tech news.jpg';
+  }
+
+  public getData() {  
+    for(let i=this.newsItemDispayedIndex;i<this.news.length;i++)
+    {
+      this.displayNews.push(this.news[i]);
+      if((i+1)%5==0) break;
+    }
+    this.newsItemDispayedIndex+=5;
+    if (this.newsItemDispayedIndex > this.displayNews.length) {
+      this.showMore = false;
+    }    
+    else {
+      this.showMore = true;
+    }
+  }
+
+  public hideData() {
+    this.displayNews = this.displayNews.slice(0,5);
+    this.showMore = true;
+    this.newsItemDispayedIndex = this.displayNews.length;
+  }
 }

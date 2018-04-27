@@ -1,4 +1,7 @@
 <div class="row carousel-row">
-    <app-carousel [news]="newsCarousel" class="text-center"></app-carousel>
+    <app-carousel *ngIf="news" [news]="newsCarousel" class="text-center"></app-carousel>
 </div>
-<app-news-list-item [news]="news"> </app-news-list-item>
+<div class="container title-container">
+    <span class="headlines col-md-offset-5">Top Stories</span>
+</div>
+<app-news-list-item *ngIf="news" [news]="news"> </app-news-list-item>

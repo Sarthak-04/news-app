@@ -1,6 +1,5 @@
 .news-item-row {
     margin-bottom: 20px;
-    /* max-height: 160px; */
 }
 .media-object {
     width: 100%;
@@ -34,11 +33,17 @@
     padding-left: 20px;
 }
 .media {
-    background-color: #fafafa;
+    /* background-color: #fafafa; */
+    border-bottom: 1px solid #ccc;
 }
 .news-body {
     padding: 5px 0 5px;
 }
 .news-media {
     padding-right: 0;
+}
+.show-more {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Nunito', sans-serif;
 }
