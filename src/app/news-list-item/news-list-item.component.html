@@ -1,12 +1,12 @@
 <div class="container">
-  <div *ngFor="let newsItem of displayNews; let i = index" class="media">
+  <div *ngFor="let newsItem of displayNews; let i = index" class="media col-md-9">
     <div class="row news-item-row">
       <div class="col-md-3 col-sm-4 news-media">
         <a href={{newsItem.url}} target="_blank">
           <img class="media-object" src={{urlToImage(i)}} alt="...">
         </a>
       </div>
-      <div class="col-md-6 col-sm-6 news-body">
+      <div class="col-md-9 col-sm-8 news-body">
         <a href={{newsItem.url}} target="_blank">
           <h4 class="media-heading">{{newsItem.title}}</h4>
         </a>
@@ -18,8 +18,8 @@
       </div>
     </div>
   </div>
-  <button class="show-more btn btn-raised btn-danger col-md-offset-5" *ngIf="showMore; else showLess" (click)="getData()">Show More</button>
+  <button class="show-more btn btn-raised btn-default col-md-offset-5" *ngIf="showMore; else showLess" (click)="getData()">Show More</button>
   <ng-template #showLess>
-    <button class="show-more btn btn-raised btn-danger col-md-offset-5" (click)="hideData()">Show Less</button>
+    <button class="show-more btn btn-raised btn-default col-md-offset-5" (click)="hideData()">Show Less</button>
   </ng-template>
 </div>

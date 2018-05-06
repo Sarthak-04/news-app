@@ -1,1 +1,11 @@
+<div class="row carousel-row">
+    <app-carousel *ngIf="techNewsCarousel" [news]="techNewsCarousel" class="text-center"></app-carousel>
+</div>
+<div class="container title-container">
+    <span class="headlines">Top Stories</span>
+</div>
 <app-news-list-item *ngIf="latestTechNews" [news]="latestTechNews"> </app-news-list-item>
+<div class="container title-container">
+    <span class="headlines ">Other Stories</span>
+</div>
+<app-news-list-item *ngIf="otherTechNews" [news]="otherTechNews"> </app-news-list-item>

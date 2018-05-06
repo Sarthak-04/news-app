@@ -1,12 +1,13 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a href="#" class="navbar-brand">News Overview</a>
+      <a href="#" [ngClass]="{'navbar-brand': true, 'active': onHomePage}" (click)='setHomePageActive(true)'>News Overview</a>
+      <a href="#" [ngClass]="{'navbar-brand': true, 'active': !onHomePage}" (click)='setHomePageActive(false)' routerLink="technology">Technology News</a>
     </div>
 
-    <div class="collapse navbar-collapse" data-toggle="collapse">
+    <!-- <div class="collapse navbar-collapse" data-toggle="collapse">
       <ul class="nav navbar-nav">
-        <li><a href="#" routerLink="technology">Tech World</a></li>
+        <li></li>
         <li><a href="#">Tech India</a></li>
         <li><a href="#" routerLink="entertainment">Entertainment</a></li>
       </ul>
@@ -19,6 +20,6 @@
           </ul>
         </li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </nav>

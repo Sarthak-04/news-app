@@ -8,8 +8,9 @@ import { NewsService } from '../news.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  news: News[];
-  newsCarousel: News[]; 
+  latestNews: News[];
+  newsCarousel: News[];
+  otherNews: News[]; 
   
   constructor(private newsService: NewsService) { }
 
@@ -18,10 +19,13 @@ export class HomeComponent implements OnInit {
   }
 
   getLatestNews(): void {
-    this.newsService.getLatestNews().subscribe((news:any) => {
-      this.news = news.articles;
-      this.newsCarousel = this.news.slice(0,3);
-      this.news = this.news.slice(3);
+    this.newsService.getLatestNews().subscribe((latestNews:any) => {
+      this.latestNews = latestNews.articles;
+      this.newsCarousel = this.latestNews.slice(0,3);
+      this.latestNews = this.latestNews.slice(3);
+    });
+    this.newsService.getOtherNews().subscribe((otherNews:any) => {
+      this.otherNews = otherNews.articles;
     });
   }
 }

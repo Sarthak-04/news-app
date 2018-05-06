@@ -13,7 +13,9 @@ export class TechnologyNewsComponent implements OnInit {
 
   latestTechNews: News[];
   allTechNews: News[];
-
+  techNewsCarousel: News[]; 
+  otherTechNews: News[];
+  
   ngOnInit() {
     this.getLatestTechNews();
   }
@@ -21,7 +23,11 @@ export class TechnologyNewsComponent implements OnInit {
   getLatestTechNews(): void {
     this.newsService.getLatestTechNews().subscribe((latestTechNews: any) => {
       this.latestTechNews = latestTechNews.articles;
-    })
+      this.techNewsCarousel = this.latestTechNews.slice(0,3);
+      this.latestTechNews = this.latestTechNews.slice(3);
+    });
+    this.newsService.getOtherTechNews().subscribe((otherTechNews:any) => {
+      this.otherTechNews = otherTechNews.articles;
+    });
   }
-
 }
