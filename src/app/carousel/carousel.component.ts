@@ -13,4 +13,8 @@ export class CarouselComponent implements OnInit {
   ngOnInit() {
   }
 
+  public urlToImage(index: string) : string {
+    return this.news[index].urlToImage ? this.news[index].urlToImage : '/assets/images/news.png';
+  }
 }
+

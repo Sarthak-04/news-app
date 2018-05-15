@@ -1,8 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     padding-top: 70px;
+    /* wanted to zoom: 125% but zoom is not supported by firefox */
+    transform: scale(1.25);
+    transform-origin: left top;
+    width: 79%;
 }
 
 .carousel-indicators {
     bottom: -8px;
+}
+
+.carousel-control.right, .carousel-control.left  {
+    background-image: none;
+}
+
+.carousel-control .icon-next, .carousel-control .icon-prev {
+    color: black;
 }

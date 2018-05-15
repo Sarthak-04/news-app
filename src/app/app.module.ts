@@ -13,7 +13,6 @@ import { NewsListItemComponent } from './news-list-item/news-list-item.component
 import { TechnologyNewsComponent } from './technology-news/technology-news.component';
 import { EntertainmentNewsComponent } from './entertainment-news/entertainment-news.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { InternationalNewsComponent } from './international-news/international-news.component';
 import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
@@ -25,7 +24,6 @@ import { CarouselComponent } from './carousel/carousel.component';
     NewsListItemComponent,
     TechnologyNewsComponent,
     EntertainmentNewsComponent,
-    InternationalNewsComponent,
     CarouselComponent
   ],
   imports: [

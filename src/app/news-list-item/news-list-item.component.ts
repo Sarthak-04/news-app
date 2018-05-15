@@ -39,7 +39,7 @@ export class NewsListItemComponent implements OnInit {
   }
 
   public urlToImage(index: string) : string {
-    return this.news[index].urlToImage ? this.news[index].urlToImage : '/assets/images/tech news.jpg';
+    return this.news[index].urlToImage ? this.news[index].urlToImage : '/assets/images/news.png';
   }
 
   public getData() {  
